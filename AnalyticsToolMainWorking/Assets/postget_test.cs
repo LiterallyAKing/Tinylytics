@@ -14,8 +14,7 @@ public class postget_test : MonoBehaviour {
 	//https://docs.unity3d.com/Manual/UnityWebRequest-SendingForm.html#UsingWWWForm
 	//https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequest.Post.html
 	//http://html.net/tutorials/php/lesson10.php
-
-
+	[Tooltip("The application identifier. Example value: com.company.app.")] public bool tooltiptest;
 	void Start() {
 		StartCoroutine(Upload());
 		//StartCoroutine(Post("https://script.google.com/macros/s/AKfycbz7lcpTWIbW5l2km988pbY4zw2oIhgSWtSm8yuXgDSn9GwcN40/exec", "Question:"+ SystemInfo.deviceUniqueIdentifier.ToString() ));
