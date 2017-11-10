@@ -32,8 +32,20 @@ public class postget_test : MonoBehaviour {
 
 		Dictionary<string, string> test2 = new Dictionary<string, string>();
 		test2.Add("UniqueID", SystemInfo.deviceUniqueIdentifier.ToString());
+		test2.Add("deviceModel", SystemInfo.deviceModel.ToString());
+		test2.Add("buildID", Application.buildGUID.ToString());
+		//test2.Add("buildTime", BuildtimeInfo.DateTimeString());
+		//time!!
+		test2.Add("operatingSystem", SystemInfo.operatingSystem.ToString());
+		test2.Add("operatingSystemFamily", SystemInfo.operatingSystemFamily.ToString());
+		test2.Add("processorType", SystemInfo.processorType.ToString());
+		test2.Add("systemMemorySize", SystemInfo.systemMemorySize.ToString());
+
+
+
 		test2.Add("Test1", "Ibelongtotest1");
 		test2.Add("Test2", "Test2please!");
+
 
 		UnityWebRequest www = UnityWebRequest.Post("https://script.google.com/macros/s/AKfycbz7lcpTWIbW5l2km988pbY4zw2oIhgSWtSm8yuXgDSn9GwcN40/exec?", test2);
 		//UnityWebRequest www = UnityWebRequest.Post("https://script.google.com/macros/s/AKfycbz7lcpTWIbW5l2km988pbY4zw2oIhgSWtSm8yuXgDSn9GwcN40/exec?Question=" + test, "?Question2=This is from Unity");
@@ -47,7 +59,7 @@ public class postget_test : MonoBehaviour {
 		yield return www.Send();
 
 
-		if (www.isError) {
+		if (www.isNetworkError) {
 			Debug.Log(www.error);
 		} else {
 			Debug.Log("Form upload complete!");
