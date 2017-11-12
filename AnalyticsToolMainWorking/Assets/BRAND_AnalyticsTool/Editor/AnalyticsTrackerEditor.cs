@@ -15,18 +15,14 @@ namespace BRAND_Analytics {
 
 
 
-		SerializedProperty metricname, triggertype, payload;
+		SerializedProperty metricname, triggertype;
 		//SerializedProperty otherobj;
 		//object dataholder;
-		string stringholder;
-		int intholder;
-		float floatholder;
-		bool boolholder;
 		BRAND_AnalyticsTracker myObjectRef;
 
 		SerializedProperty datatosend;
 
-
+	
 		BRAND_Analytics.TriggerEvent chosentrigger;
 		//int datatypeselected = 0;
 
@@ -34,7 +30,8 @@ namespace BRAND_Analytics {
 			myObjectRef = serializedObject.targetObject as BRAND_AnalyticsTracker;
 			metricname = serializedObject.FindProperty("metric_name");
 			triggertype = serializedObject.FindProperty("trigger").FindPropertyRelative("triggerEvent");
-			payload = serializedObject.FindProperty("payload");
+			chosentrigger = (BRAND_Analytics.TriggerEvent)triggertype.enumValueIndex;
+
 			//otherobj = serializedObject.FindProperty("otherobjectref");
 
 			datatosend = serializedObject.FindProperty("datatosend");
@@ -43,13 +40,14 @@ namespace BRAND_Analytics {
 
 		public override void OnInspectorGUI() {
 			serializedObject.Update();
-
-
+	
 
 
 			EditorGUILayout.PropertyField(metricname, new GUIContent("Metric Name"));
 			chosentrigger = (BRAND_Analytics.TriggerEvent)EditorGUILayout.EnumPopup("Trigger", chosentrigger);
-			triggertype.intValue = (int)chosentrigger;
+			
+
+			triggertype.enumValueIndex = (int)chosentrigger;
 
 
 			//EditorGUILayout.HelpBox("This Component is designed to work with Unity Analytics, which is not currently enabled. To enable Analytics, go to Window/Services, select Analytics and click the 'Enable Analytics' button.", MessageType.Warning);

@@ -15,25 +15,16 @@ namespace BRAND_Analytics {
 		[SerializeField] public string metric_name;
 		[SerializeField] public ValueProperty datatosend;
 
-		[SerializeField] public AnalyticsTrigger trigger = new AnalyticsTrigger();
+		[SerializeField] public AnalyticsTrigger trigger;
 
-		[SerializeField] public AnalyticsAction payload = new AnalyticsAction();
 
-		public void SetDataToSend(object data) {
-			//data_to_send = data;
-			//if (data_to_send != null) {
-			//	Debug.Log(data_to_send.ToString());
-			//}
-
-			Debug.Log("I hold: " + datatosend.propertyValue);
-		}
-
-		public void TriggerEvent() {
-			SendEvent();
-		}
+		//TimeSinceGameStarted,
+		//TotalTimePlayed
 
 		void SendEvent() {
 			//payload.Send();
+
+			BRAND_AnalyticsManager.SendData(metric_name, datatosend.propertyValue, Application.isEditor);
 		}
 
 
@@ -48,16 +39,9 @@ namespace BRAND_Analytics {
 			if (trigger.triggerEvent == BRAND_Analytics.TriggerEvent.Start) {
 				SendEvent();
 			}
-
-			BRAND_AnalyticsManager.Test();
-
-
 		}
 
 		void OnEnable() {
-
-			
-
 			if (trigger.triggerEvent == BRAND_Analytics.TriggerEvent.OnEnable) {
 				SendEvent();
 			}
@@ -68,12 +52,18 @@ namespace BRAND_Analytics {
 				SendEvent();
 			}
 		}
+
 		void OnDestroy() {
 			if (trigger.triggerEvent == BRAND_Analytics.TriggerEvent.OnDestroy) {
 				SendEvent();
 			}
 		}
 
+		public void OnCustomTrigger() {
+			if (trigger.triggerEvent == BRAND_Analytics.TriggerEvent.CustomTriggerCall) {
+				SendEvent();
+			}
+		}
 		
 
 	}

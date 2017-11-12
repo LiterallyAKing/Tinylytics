@@ -29,5 +29,6 @@ namespace BRAND_Analytics {
 		OnEnable,
 		OnDisable,
 		OnDestroy,
+		CustomTriggerCall
 	}
 }
