@@ -427,7 +427,7 @@ MonoBehaviour:
     m_Value: 0
     m_Target:
       m_Target: {fileID: 1311246340}
-      m_Path: grabstring
+      m_Path: 
       m_ValidTypeNames:
       - System.Int32
       - System.Boolean

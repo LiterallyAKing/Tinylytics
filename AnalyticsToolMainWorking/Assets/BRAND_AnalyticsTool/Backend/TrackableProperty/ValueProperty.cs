@@ -36,12 +36,12 @@ namespace BRAND_Analytics {
         public enum PropertyType
         {
             Disabled,
-            Static,
-            Dynamic
+            Custom,
+            Linked
         }
 
         [SerializeField]
-        PropertyType m_PropertyType = PropertyType.Static;
+        PropertyType m_PropertyType = PropertyType.Custom;
 
         // Derived type of this value
         [SerializeField]
@@ -62,7 +62,7 @@ namespace BRAND_Analytics {
         public string propertyValue
         {
             get {
-                if (m_PropertyType == PropertyType.Dynamic && m_Target != null)
+                if (m_PropertyType == PropertyType.Linked && m_Target != null)
                 {
                     var value = m_Target.GetValue();
                     return value == null ? null : value.ToString().Trim();
@@ -85,9 +85,9 @@ namespace BRAND_Analytics {
         {
             switch (m_PropertyType)
             {
-                case PropertyType.Static:
+                case PropertyType.Custom:
                     return !string.IsNullOrEmpty(m_Value) || Type.GetType(m_ValueType) != typeof(string);
-                case PropertyType.Dynamic:
+                case PropertyType.Linked:
                     return m_Target != null && m_Target.GetValue() != null;
                 case PropertyType.Disabled:
                 default:

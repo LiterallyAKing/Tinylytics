@@ -13,7 +13,8 @@ namespace BRAND_Analytics {
 			//Debug.Log("Before first scene loaded");
 			AnalyticsConfig storage = Resources.Load<AnalyticsConfig>("AnalyticsConfiguration");
 
-			GameObject instance = GameObject.Instantiate(Resources.Load("AnalyticsManager")) as GameObject;
+			//GameObject instance = GameObject.Instantiate(Resources.Load("AnalyticsManager")) as GameObject;
+			GameObject.Instantiate(Resources.Load("AnalyticsManager"));
 			BRAND_AnalyticsManager.SetUniqueURL(storage.uniqueURL);
 
 

@@ -1,4 +1,4 @@
-﻿import UnityEngine
+﻿
 
 macro build_buildtime_info():
     dateString = System.DateTime.Now.ToString()

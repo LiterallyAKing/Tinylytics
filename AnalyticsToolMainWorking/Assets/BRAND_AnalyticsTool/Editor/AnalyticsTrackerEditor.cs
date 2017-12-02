@@ -11,14 +11,14 @@ namespace BRAND_Analytics {
 
 	public class AnalyticsTrackerEditor : Editor {
 
-		string[] datatosendchoicetext = new string[5] { "Custom String", "Custom Float", "Custom Int", "Custom Bool", "Reference to Script Property" };
+
 
 
 
 		SerializedProperty metricname, triggertype;
 		//SerializedProperty otherobj;
 		//object dataholder;
-		BRAND_AnalyticsTracker myObjectRef;
+		//BRAND_AnalyticsTracker myObjectRef;
 
 		SerializedProperty datatosend;
 
@@ -27,7 +27,7 @@ namespace BRAND_Analytics {
 		//int datatypeselected = 0;
 
 		void OnEnable() {
-			myObjectRef = serializedObject.targetObject as BRAND_AnalyticsTracker;
+			//myObjectRef = serializedObject.targetObject as BRAND_AnalyticsTracker;
 			metricname = serializedObject.FindProperty("metric_name");
 			triggertype = serializedObject.FindProperty("trigger").FindPropertyRelative("triggerEvent");
 			chosentrigger = (BRAND_Analytics.TriggerEvent)triggertype.enumValueIndex;
@@ -43,8 +43,8 @@ namespace BRAND_Analytics {
 	
 
 
-			EditorGUILayout.PropertyField(metricname, new GUIContent("Metric Name"));
-			chosentrigger = (BRAND_Analytics.TriggerEvent)EditorGUILayout.EnumPopup("Trigger", chosentrigger);
+			EditorGUILayout.PropertyField(metricname, new GUIContent("Metric Name","This is a custom field to name the stat, like 'GameWon', 'Level4Loaded' or 'PlayerAccuracy'"));
+			chosentrigger = (BRAND_Analytics.TriggerEvent)EditorGUILayout.EnumPopup(new GUIContent("Trigger","This is what will cause the tracker to fire, when this object is enabled, started, destroyed, etc."), chosentrigger);
 			
 
 			triggertype.enumValueIndex = (int)chosentrigger;
@@ -92,7 +92,7 @@ namespace BRAND_Analytics {
 
 
 			
-			EditorGUILayout.PropertyField(datatosend, new GUIContent("Data to Send"));
+			EditorGUILayout.PropertyField(datatosend, new GUIContent("Data to Send", "This is the data which will be sent, you can send any string, int, float or bool, specified here or linked to a script"));
 		
 			
 

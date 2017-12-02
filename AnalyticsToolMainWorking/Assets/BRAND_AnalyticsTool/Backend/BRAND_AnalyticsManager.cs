@@ -77,9 +77,9 @@ namespace BRAND_Analytics {
 			yield return www.Send();
 
 			if (www.isNetworkError) {
-				Debug.Log(www.error);
+				//Debug.Log(www.error);
 			} else {
-				Debug.Log("Form upload complete!");
+				//Debug.Log("Form upload complete!");
 			}
 		}
 		

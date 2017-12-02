@@ -7,11 +7,11 @@ using BRAND_Analytics;
 
 
 namespace BRAND_Analytics {
+[AddComponentMenu("IndieAnalytics/Indie Analytics Tracker")]
 	public class BRAND_AnalyticsTracker : MonoBehaviour {
 		//https://docs.unity3d.com/Manual/JSONSerialization.html
 
 		
-
 		[SerializeField] public string metric_name;
 		[SerializeField] public ValueProperty datatosend;
 

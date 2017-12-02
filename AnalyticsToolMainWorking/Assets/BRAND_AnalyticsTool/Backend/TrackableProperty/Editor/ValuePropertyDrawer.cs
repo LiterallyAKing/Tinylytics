@@ -10,8 +10,8 @@ namespace BRAND_Analytics {
         True,
         False
     }
-
-    enum ValueTypePopup {
+	//		string[] datatosendchoicetext = new string[5] { "Custom String", "Custom Float", "Custom Int", "Custom Bool", "Reference to Script Property" };
+	enum ValueTypePopup {
         STRING,
         FLOAT,
         LONG,
@@ -23,7 +23,7 @@ namespace BRAND_Analytics {
     [CustomPropertyDrawer (typeof(ValueProperty))]
     class ValuePropertyDrawer : PropertyDrawer
     {
-        GUIContent valueLabelContent = new GUIContent("Value", "The resulting value. Values can be either static (set by you in the field below) or dynamic (attached to the properties of a GameObject component).");
+        GUIContent valueLabelContent = new GUIContent("Data", "This is the data which will be sent, it can be any string, int, float or bool, which you specify the value of here. Or can be linked to a script's properties from another object in the scene.");
         GUIContent andLabelContent = new GUIContent("And");
 
         //float terminalHeight;
@@ -74,7 +74,7 @@ namespace BRAND_Analytics {
 
             // if we are switching away from dynamic then clear out the dynamic values
             if ((ValueProperty.PropertyType)m_PropertyType.enumValueIndex != oldPropertyType &&
-                oldPropertyType == ValueProperty.PropertyType.Dynamic)
+                oldPropertyType == ValueProperty.PropertyType.Linked)
             {
                 SerializedProperty m_Target = property.FindPropertyRelative("m_Target");
                 m_Target.FindPropertyRelative("m_Type").stringValue = null;
@@ -105,7 +105,7 @@ namespace BRAND_Analytics {
                 var element = validTypeNames.GetArrayElementAtIndex(0);
                 element.stringValue = m_ValueType.stringValue;
                 m_Target.FindPropertyRelative("m_EnumType").stringValue = property.FindPropertyRelative("m_EnumType").stringValue;
-                if (property.FindPropertyRelative("m_EnumTypeIsCustomizable").boolValue && propertyType == ValueProperty.PropertyType.Dynamic)
+                if (property.FindPropertyRelative("m_EnumTypeIsCustomizable").boolValue && propertyType == ValueProperty.PropertyType.Linked)
                 {
                     validTypeNames.InsertArrayElementAtIndex(1);
                     element = validTypeNames.GetArrayElementAtIndex(1);
@@ -140,7 +140,7 @@ namespace BRAND_Analytics {
                 validTypeNames.InsertArrayElementAtIndex(7);
                 element = validTypeNames.GetArrayElementAtIndex(7);
                 element.stringValue = typeof(string).ToString();
-                if(propertyType == ValueProperty.PropertyType.Dynamic)
+                if(propertyType == ValueProperty.PropertyType.Linked)
                 {
                     validTypeNames.InsertArrayElementAtIndex(8);
                     element = validTypeNames.GetArrayElementAtIndex(8);
@@ -150,7 +150,7 @@ namespace BRAND_Analytics {
 
             string selectedType = m_Target.FindPropertyRelative("m_Type").stringValue;
 
-            EditorGUI.BeginDisabledGroup (propertyType == ValueProperty.PropertyType.Dynamic || m_FixedType.boolValue);
+            EditorGUI.BeginDisabledGroup (propertyType == ValueProperty.PropertyType.Linked || m_FixedType.boolValue);
             if (!string.IsNullOrEmpty(m_ValueType.stringValue) && CustomEnumPopup.GetEnumType(m_ValueType.stringValue) != null)
             {
                 property.FindPropertyRelative("m_EnumType").stringValue = m_ValueType.stringValue;
@@ -250,12 +250,12 @@ namespace BRAND_Analytics {
 
             switch (propertyType)
             {
-                case ValueProperty.PropertyType.Dynamic:
+                case ValueProperty.PropertyType.Linked:
                     
                     EditorGUI.PropertyField(rect, m_Target, GUIContent.none);
                     break;
 
-                case ValueProperty.PropertyType.Static:
+                case ValueProperty.PropertyType.Custom:
                     if (valueType == typeof(string).ToString())
                     {
                         m_Value.stringValue = EditorGUI.TextField(rect, m_Value.stringValue);

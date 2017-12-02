@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4446325325038004}
-  - component: {fileID: 114905877659078042}
   - component: {fileID: 114750676215081684}
   m_Layer: 0
   m_Name: AnalyticsManager
@@ -52,15 +51,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d569f39d7a749ab4fa5bee06773a0adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114905877659078042
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528723596663494}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b27bb4342d5c44e4da6d4c3586f51bce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltiptest: 0
