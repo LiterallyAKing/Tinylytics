@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -113,34 +113,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &65500464
+--- !u!1 &758633544
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 65500466}
-  - component: {fileID: 65500465}
+  - component: {fileID: 758633547}
+  - component: {fileID: 758633546}
+  - component: {fileID: 758633545}
   m_Layer: 0
-  m_Name: trackerExample
+  m_Name: EG3 _ Send Custom Metric Call via widget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &65500465
+--- !u!114 &758633545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 65500464}
+  m_GameObject: {fileID: 758633544}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a73eb35823d688d4799873bdcc5568c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metric_name: FloatFromGrabMe
+  metric_name: CustomDataAfterDelay
   datatosend:
     m_EditingCustomValue: 0
     m_PopupIndex: 0
@@ -149,12 +150,12 @@ MonoBehaviour:
     m_EnumType: 
     m_EnumTypeIsCustomizable: 1
     m_CanDisable: 0
-    m_PropertyType: 2
-    m_ValueType: System.Single
-    m_Value: 0
+    m_PropertyType: 1
+    m_ValueType: System.String
+    m_Value: I was called
     m_Target:
-      m_Target: {fileID: 1311246340}
-      m_Path: weallfloat
+      m_Target: {fileID: 0}
+      m_Path: 
       m_ValidTypeNames:
       - System.Int32
       - System.Boolean
@@ -164,89 +165,35 @@ MonoBehaviour:
       - System.Int64
       - System.Int16
       - System.String
-      - enum
-      m_Type: System.Single
+      m_Type: System.String
       m_EnumType: 
   trigger:
-    triggerEvent: 3
---- !u!4 &65500466
-Transform:
+    triggerEvent: 6
+--- !u!114 &758633546
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 65500464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 202.5, y: 152, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &95023597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 95023599}
-  - component: {fileID: 95023598}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &95023598
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 95023597}
+  m_GameObject: {fileID: 758633544}
   m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &95023599
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3891c5f629134f46860f6fae55fb2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsDelayToSendData: 1
+--- !u!4 &758633547
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 95023597}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_GameObject: {fileID: 758633544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970051130
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,89 +283,74 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1311246339
+--- !u!1 &1207513645
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1311246341}
-  - component: {fileID: 1311246340}
-  - component: {fileID: 1311246342}
+  - component: {fileID: 1207513647}
+  - component: {fileID: 1207513646}
   m_Layer: 0
-  m_Name: OGrabMe
+  m_Name: EG4 _ Send Custom Metric via Code
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1311246340
+--- !u!114 &1207513646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1311246339}
+  m_GameObject: {fileID: 1207513645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 010a4f824e60ef94daaff3aa0ed468c9, type: 3}
+  m_Script: {fileID: 11500000, guid: dd83b736b25509149ad649470e490aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabint: 666
-  grabstring: You got it
-  weallfloat: 3.14
---- !u!4 &1311246341
+--- !u!4 &1207513647
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1311246339}
+  m_GameObject: {fileID: 1207513645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 202.5, y: 152, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1311246342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1311246339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c4fa3dc14b5414f80bd42c3be1f972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1733016912
+--- !u!1 &1348912342
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1733016914}
-  - component: {fileID: 1733016913}
+  - component: {fileID: 1348912344}
+  - component: {fileID: 1348912343}
   m_Layer: 0
-  m_Name: trackerExample (1)
+  m_Name: EG2 _ Grab Player Health when Player Disabled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1733016913
+--- !u!114 &1348912343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733016912}
+  m_GameObject: {fileID: 1348912342}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a73eb35823d688d4799873bdcc5568c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metric_name: StringFromGragme
+  metric_name: PlayerHealthWhenDisabled
   datatosend:
     m_EditingCustomValue: 0
     m_PopupIndex: 0
@@ -429,10 +361,10 @@ MonoBehaviour:
     m_CanDisable: 0
     m_PropertyType: 2
     m_ValueType: System.Int32
-    m_Value: 0
+    m_Value: 
     m_Target:
-      m_Target: {fileID: 1311246340}
-      m_Path: grabint
+      m_Target: {fileID: 2088838833}
+      m_Path: playerHealth
       m_ValidTypeNames:
       - System.Int32
       - System.Boolean
@@ -446,17 +378,128 @@ MonoBehaviour:
       m_Type: System.Int32
       m_EnumType: 
   trigger:
-    triggerEvent: 3
---- !u!4 &1733016914
+    triggerEvent: 4
+--- !u!4 &1348912344
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733016912}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 202.5, y: 152, z: 0}
+  m_GameObject: {fileID: 1348912342}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2088838834}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1919355531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1919355533}
+  - component: {fileID: 1919355532}
+  m_Layer: 0
+  m_Name: EG1 _ Log Current Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1919355532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919355531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73eb35823d688d4799873bdcc5568c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metric_name: Current Level
+  datatosend:
+    m_EditingCustomValue: 0
+    m_PopupIndex: 0
+    m_CustomValue: 
+    m_FixedType: 0
+    m_EnumType: 
+    m_EnumTypeIsCustomizable: 1
+    m_CanDisable: 0
+    m_PropertyType: 1
+    m_ValueType: System.Int32
+    m_Value: 1
+    m_Target:
+      m_Target: {fileID: 0}
+      m_Path: 
+      m_ValidTypeNames:
+      - System.Int32
+      - System.Boolean
+      - System.Decimal
+      - System.Double
+      - System.Single
+      - System.Int64
+      - System.Int16
+      - System.String
+      m_Type: System.Int32
+      m_EnumType: 
+  trigger:
+    triggerEvent: 2
+--- !u!4 &1919355533
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919355531}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 200.54176, y: 150.15097, z: 2.978705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2088838832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2088838834}
+  - component: {fileID: 2088838833}
+  m_Layer: 0
+  m_Name: ExamplePlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2088838833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2088838832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9692e6bf990bd429c5d7409f520329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 55
+  playerName: Hello World
+--- !u!4 &2088838834
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2088838832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1348912344}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

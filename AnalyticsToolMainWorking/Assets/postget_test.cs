@@ -28,8 +28,7 @@ public class postget_test : MonoBehaviour {
 
 
 		//Debug.Log(formData);
-		string test = "Question=" + SystemInfo.deviceUniqueIdentifier.ToString();
-
+		
 		Dictionary<string, string> test2 = new Dictionary<string, string>();
 		test2.Add("UniqueID", SystemInfo.deviceUniqueIdentifier.ToString());
 		test2.Add("deviceModel", SystemInfo.deviceModel.ToString());
@@ -56,7 +55,7 @@ public class postget_test : MonoBehaviour {
 
 		//www.SetRequestHeader("Content-Type", "application/json");
 
-		yield return www.Send();
+		yield return www.SendWebRequest();
 
 
 		if (www.isNetworkError) {
@@ -74,7 +73,7 @@ public class postget_test : MonoBehaviour {
 		request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
 		request.SetRequestHeader("Content-Type", "application/json");
 
-		yield return request.Send();
+		yield return request.SendWebRequest();
 
 		Debug.Log("Status Code: " + request.responseCode);
 	}
