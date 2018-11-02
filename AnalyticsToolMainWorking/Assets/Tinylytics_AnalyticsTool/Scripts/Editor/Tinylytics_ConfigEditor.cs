@@ -1,8 +1,15 @@
-﻿using UnityEngine;
-using UnityEditor;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+using System;
+using System.IO;
+using System.Reflection;
+
+
 namespace Tinylytics{
+
+
 public class Tinylytics_ConfigEditor : EditorWindow {
 
 	public Tinylytics_Config analyticsConfig;
@@ -152,5 +159,42 @@ public class Tinylytics_ConfigEditor : EditorWindow {
 
 
 
-}
+	}
+
+
+	[CustomEditor(typeof(Tinylytics_Config))]
+	public class Tinylytics_ConfigInspectorEditor : Editor {
+
+		GUIStyle LinkStyle { get { return m_LinkStyle; } }
+		[SerializeField] GUIStyle m_LinkStyle;
+
+		GUIStyle TitleStyle { get { return m_TitleStyle; } }
+		[SerializeField] GUIStyle m_TitleStyle;
+
+		GUIStyle HeadingStyle { get { return m_HeadingStyle; } }
+		[SerializeField] GUIStyle m_HeadingStyle;
+
+		GUIStyle BodyStyle { get { return m_BodyStyle; } }
+		[SerializeField] GUIStyle m_BodyStyle;
+
+
+		public override void OnInspectorGUI() {
+			var config = (Tinylytics_Config)target;
+
+			m_BodyStyle = new GUIStyle(EditorStyles.label);
+			m_BodyStyle.wordWrap = true;
+			m_BodyStyle.fontSize = 14;
+
+			m_TitleStyle = new GUIStyle(m_BodyStyle);
+			m_TitleStyle.fontSize = 26;
+
+			m_HeadingStyle = new GUIStyle(m_BodyStyle);
+			m_HeadingStyle.fontSize = 18;
+
+			GUILayout.Label(config.header, HeadingStyle);
+
+		}
+
+	}
+
 }

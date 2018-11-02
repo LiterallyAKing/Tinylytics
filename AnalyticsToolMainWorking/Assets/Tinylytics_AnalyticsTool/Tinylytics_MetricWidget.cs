@@ -52,12 +52,6 @@ namespace Tinylytics {
 			}
 		}
 
-		public void OnCustomTrigger() {
-			if (trigger.triggerEvent == TriggerEvent.CustomTriggerCall) {
-				SendEvent();
-			}
-		}
-
 		void SendEvent() {
 			//payload.Send();
 			if(BackendManager.Instance != null){

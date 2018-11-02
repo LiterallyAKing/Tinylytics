@@ -29,6 +29,5 @@ namespace Tinylytics {
 		OnEnable,
 		OnDisable,
 		OnDestroy,
-		CustomTriggerCall
 	}
 }

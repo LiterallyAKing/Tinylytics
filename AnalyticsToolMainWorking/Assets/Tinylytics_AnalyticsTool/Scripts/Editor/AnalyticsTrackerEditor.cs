@@ -11,10 +11,6 @@ namespace Tinylytics {
 
 	public class AnalyticsTrackerEditor : Editor {
 
-
-
-
-
 		SerializedProperty metricname, triggertype;
 		//SerializedProperty otherobj;
 		//object dataholder;

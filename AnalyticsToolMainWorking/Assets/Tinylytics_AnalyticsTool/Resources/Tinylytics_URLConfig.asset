@@ -11,4 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc25b0c2142be1419842db66d325513, type: 3}
   m_Name: Tinylytics_URLConfig
   m_EditorClassIdentifier: 
+  logo: {fileID: 0}
+  header: Test
+  text: 
   uniqueURL: AKfycbz7lcpTWIbW5l2km988pbY4zw2oIhgSWtSm8yuXgDSn9GwcN40

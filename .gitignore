@@ -33,3 +33,4 @@ sysinfo.txt
 *.unitypackage
 AnalyticsToolMainWorking/Temp/
 AnalyticsToolMainWorking/ProjectSettings/
+AnalyticsToolMainWorking/obj/
