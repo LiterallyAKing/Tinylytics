@@ -14,10 +14,10 @@ namespace Tinylytics {
 		public Dictionary<string, string> data = new Dictionary<string, string>();
 
 		
-		public DataPacket(string metricname, string newdata, bool debugmode) {
+		public DataPacket(string metricname, string newdata) {
 
 			//All the standard fields
-			if (debugmode) {
+			if (Application.isEditor) {
 				data.Add("TestingStatus", "InEditor");
 			} else {
 				data.Add("TestingStatus", "LiveBuild");
@@ -67,7 +67,7 @@ namespace Tinylytics {
 
 		public static void SendData(string metricname, string data) {
 			if(_instance.Analytics_Enabled){
-			DataPacket tosend = new DataPacket(metricname, data, Application.isEditor);
+			DataPacket tosend = new DataPacket(metricname, data);
 
 			Instance.StartCoroutine(Instance.PostData(tosend));
 			}
