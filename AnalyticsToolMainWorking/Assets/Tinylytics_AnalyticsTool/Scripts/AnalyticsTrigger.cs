@@ -29,5 +29,6 @@ namespace Tinylytics {
 		OnEnable,
 		OnDisable,
 		OnDestroy,
+		OnSceneUnloaded
 	}
 }

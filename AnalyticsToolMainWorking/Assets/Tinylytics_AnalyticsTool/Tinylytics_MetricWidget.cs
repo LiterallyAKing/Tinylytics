@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 
 namespace Tinylytics {
@@ -37,6 +37,8 @@ namespace Tinylytics {
 		void OnEnable() {
 			if (trigger.triggerEvent == TriggerEvent.OnEnable) {
 				SendEvent();
+			} else if (trigger.triggerEvent == TriggerEvent.OnSceneUnloaded) {
+				SceneManager.sceneUnloaded += OnSceneUnloaded;
 			}
 		}
 
@@ -51,6 +53,13 @@ namespace Tinylytics {
 				SendEvent();
 			}
 		}
+
+		void OnSceneUnloaded(Scene scene) {
+			if (trigger.triggerEvent == TriggerEvent.OnSceneUnloaded) {
+				SendEvent();
+			}
+		}
+
 
 		void SendEvent() {
 			//payload.Send();
