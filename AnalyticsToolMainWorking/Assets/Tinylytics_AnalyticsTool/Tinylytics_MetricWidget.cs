@@ -60,6 +60,12 @@ namespace Tinylytics {
 			}
 		}
 
+		void OnApplicationQuit() {
+			if (trigger.triggerEvent == TriggerEvent.OnApplicationQuit) {
+				SendEvent();
+			}
+		}
+
 
 		void SendEvent() {
 			//payload.Send();
