@@ -2,7 +2,9 @@
 using System.Reflection;
 using System.Text;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 using Object = UnityEngine.Object;
 

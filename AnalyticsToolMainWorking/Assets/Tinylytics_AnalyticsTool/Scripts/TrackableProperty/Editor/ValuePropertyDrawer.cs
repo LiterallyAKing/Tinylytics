@@ -2,8 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using UnityEngine.UI;
+#if UNITY_EDITOR
 using UnityEngine;
+using UnityEngine.UI;
+#endif
+
 
 namespace Tinylytics {
     enum BoolPopup {
