@@ -29,7 +29,7 @@ namespace Tinylytics {
 			//data.Add("Player_processorType", SystemInfo.processorType.ToString());
 			data.Add("Player_SystemMemory", SystemInfo.systemMemorySize.ToString());
 			data.Add("Build_UniqueID", Application.buildGUID.ToString());
-			data.Add("Build_DateTime", Tinylytics_BuildtimeInfo.DateTimeString());
+			data.Add("Build_DateTime", BuildInfo.BUILD_TIME);
 
 			//new data
 			data.Add("MetricName", metricname);
@@ -70,6 +70,7 @@ namespace Tinylytics {
 			DataPacket tosend = new DataPacket(metricname, data);
 
 			Instance.StartCoroutine(Instance.PostData(tosend));
+				Debug.Log("Attempted to send data");
 			}
 		}
 
@@ -81,9 +82,9 @@ namespace Tinylytics {
 			yield return www.SendWebRequest();
 
 			if (www.isNetworkError) {
-				//Debug.Log(www.error);
+				Debug.Log(www.error);
 			} else {
-				//Debug.Log("Form upload complete!");
+				Debug.Log("Form upload complete!");
 			}
 		}
 		
