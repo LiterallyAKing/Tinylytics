@@ -29,10 +29,12 @@ public class BurgessAnalyticsManager : MonoBehaviour {
 		get { return levelTime; }
 	}
 
+
 	int levelMoveCount = 0;
 	public int LevelMoveCount {
 		get { return levelMoveCount; }
 	}
+
 
 	int levelUndoCount = 0;
 	public int LevelUndoCount {
