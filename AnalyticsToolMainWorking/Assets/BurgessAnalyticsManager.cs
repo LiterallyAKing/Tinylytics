@@ -8,7 +8,9 @@ public class BurgessAnalyticsManager : MonoBehaviour {
 
 	public static BurgessAnalyticsManager me = null;
 
+
 	public bool useAnalytics;
+
 
 	string LevelIndex {
 		//get { return Persist.s.CurrentLevelIndex.ToString(); }
