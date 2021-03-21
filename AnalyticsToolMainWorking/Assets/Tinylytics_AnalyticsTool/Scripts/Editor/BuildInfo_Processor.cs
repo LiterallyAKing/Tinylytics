@@ -16,7 +16,7 @@ namespace Tinylytics {
 			sb.Append("namespace Tinylytics { public static class BuildInfo");
 			sb.Append("{");
 			sb.Append("public static string BUILD_TIME = \"");
-			sb.Append(DateTime.UtcNow.ToString());
+			sb.Append(DateTime.Now.ToString());
 			sb.Append("\";");
 			sb.Append("}}");
 			//this could also contain other build info from report.summary
