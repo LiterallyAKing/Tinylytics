@@ -70,7 +70,8 @@ namespace Tinylytics {
 			DataPacket tosend = new DataPacket(metricname, data);
 
 			Instance.StartCoroutine(Instance.PostData(tosend));
-				Debug.Log("Attempted to send data");
+			//Debug.Log("Attempted to send data");
+
 			}
 		}
 
@@ -84,7 +85,7 @@ namespace Tinylytics {
 			if (www.isNetworkError) {
 				Debug.Log(www.error);
 			} else {
-				Debug.Log("Form upload complete!");
+				//Debug.Log("Form upload complete!");
 			}
 		}
 		

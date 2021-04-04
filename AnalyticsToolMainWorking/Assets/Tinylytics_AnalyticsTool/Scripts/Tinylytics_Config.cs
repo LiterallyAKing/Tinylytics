@@ -6,7 +6,7 @@ public class Tinylytics_Config : ScriptableObject {
 		public Texture2D logo;
 		public string header, text;
 
-		public string uniqueURL;
+		public string deploymentID;
 }
 
 }

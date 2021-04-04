@@ -79,12 +79,12 @@ namespace Tinylytics {
 
 
 				GUILayout.BeginHorizontal();
-				GUILayout.Label("Unique URL:", EditorStyles.boldLabel);
+				GUILayout.Label("Deployment ID:", EditorStyles.boldLabel);
 				GUILayout.EndHorizontal();
 
 				GUILayout.BeginHorizontal();
 
-				analyticsConfig.uniqueURL = EditorGUILayout.TextField("Unique URL", analyticsConfig.uniqueURL as string);
+				analyticsConfig.deploymentID = EditorGUILayout.TextField("Deployment ID", analyticsConfig.deploymentID as string);
 
 
 				GUILayout.Space(60);
@@ -161,7 +161,7 @@ namespace Tinylytics {
 
 		Tinylytics_Config CreateAnalyticsConfigFile() {
 			Tinylytics_Config asset = ScriptableObject.CreateInstance<Tinylytics_Config>();
-			AssetDatabase.CreateAsset(asset, "Assets/Resources/AnalyticsConfiguration.asset");
+			AssetDatabase.CreateAsset(asset, "Assets/Tinylytics_AnalyticsTool/Resources/Tinylytics_URLConfig.asset");
 			AssetDatabase.SaveAssets();
 			return asset;
 		}
@@ -214,7 +214,8 @@ namespace Tinylytics {
 			m_HeadingStyle = new GUIStyle(m_BodyStyle);
 			m_HeadingStyle.fontSize = 18;
 
-			GUILayout.Label(config.header, HeadingStyle);
+			GUILayout.Label("Deployment ID:", HeadingStyle);
+			GUILayout.Label(config.deploymentID, BodyStyle);
 
 		}
 

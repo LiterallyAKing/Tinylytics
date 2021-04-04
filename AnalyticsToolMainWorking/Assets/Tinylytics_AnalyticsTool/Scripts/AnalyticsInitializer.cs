@@ -11,7 +11,7 @@ namespace Tinylytics {
 
 			//GameObject instance = GameObject.Instantiate(Resources.Load("AnalyticsManager")) as GameObject;
 			GameObject.Instantiate(Resources.Load("Tinylytics_BackendManager"));
-			BackendManager.SetUniqueURL(storage.uniqueURL);
+			BackendManager.SetUniqueURL(storage.deploymentID);
 
 
 		}

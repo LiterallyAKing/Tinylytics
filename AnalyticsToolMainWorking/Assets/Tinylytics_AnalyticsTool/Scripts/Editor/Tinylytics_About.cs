@@ -35,10 +35,10 @@ namespace Tinylytics {
 
 			EditorGUILayout.BeginHorizontal();
 			// About us
-			GUILayout.Label("info about us");
+			GUILayout.Label("About Info Here!");
 			EditorGUILayout.EndHorizontal();
 			// Special thanks
-			GUILayout.Label("We would like to extend a special thanks to ");
+			GUILayout.Label(" ");
 
 			GUILayout.Space(16f);
 			EditorGUILayout.BeginHorizontal();

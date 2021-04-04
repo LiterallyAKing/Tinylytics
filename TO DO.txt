@@ -1,0 +1,7 @@
+playerid - be able to pass it in
+
+
+
+
+
+ideas- "cookbook", a doc on how designers use analytics
