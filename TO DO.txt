@@ -1,7 +1,83 @@
-playerid - be able to pass it in
+shared drive: 
+https://drive.google.com/drive/u/1/folders/0BwMDQkWCgaBOUTFhZDFTODFINzg?resourcekey=0-B8fkun5Pfxgk5zr9HlHfFQ
 
 
 
+### wishes:
+- automatic handling / logging of analytics most people would want, like session time, level time, etc
+- - it would be great to include two linked pieces of data together as one log. for example, i want to log the number of moves in a level, it would be good to log the number of moves and the level number along with it. same idea with level time
+- if you have many components on one object and you intend to use a custom trigger call, getting the correct script in code is not especially user friendly. best case is you have a bunch of public variables for the script and you drag and drop. i guess you could use the metric name to find the script you want right now, but that's probably slow, a little unintuitive, and would likely run into problems because the metric names don't have to be unique.
+- unity has an OnApplicationQuit method which is great for calling a method to log the end of a session, calculating time played or whatever other data you might want. seems like this doesn't work with the current implementation of the analytics posting. perhaps there isn't enough time to send the data before the application closes.
+
+- would prefer option to add the analytics manager myself instead of it defaulting to creating an object in the scene. Maybe it could check for the script in the scene to see if the object needs to be created first.
+
+// help facilitate local testing somehow, where playerid will be the same throughout test. A way to clear playerid, or a sessionid.
 
 
-ideas- "cookbook", a doc on how designers use analytics
+request data FROM the sheet into Unity
+
+
+### TOOLside
+
+better menu system.
+A toggle (in a menu) to easily turn on/off analytics tracking, in editor, and in the build.
+Don't allow the widget to be edited when in play mode (code to do this in moments gif editor)
+
+playerid - be able to pass it in from user's own mgmt system
+
+allow for customizing the destination url for any RESTful destination, add support for api key & hash
+
+
+ability to log stat directly from script without a component, static overload method
+
+Add Vector3 Data Type
+- also, maybe the metric string can be gotten automatically from the name of the variable being sent.
+More versatility to Tinylytics.AnalyticsManager.LogCustomMetric() method, allow to be overridden with different sorts of data
+
+//canned stats
+recording time (raw data of any duration)
+recording time since (time taken since some earlier event)
+record value (int/float/string/vec3)
+increment a value (eg enemies killed. Or cumulative time? eg. time spent on menu)
+increment value if larger (eg, max level reached)
+
+"Analytics Manager", you can add arbitrary data to it. Like, if you set a variable that doens't exist, it creates it.
+Total time spent per session, time per level. (from burgess, undos per level, moves per level)
+
+
+
+//triggers:
+when this loads (for one-time snapshots, like level loading)
+when this unloads (check if something has been killed or removed)
+when something else tells this to (generic for customization)
+every N seconds while true (could use as a timer for things with stop/start, 
+
+
+
+### destination template doc
+Clean up, add sample charts?
+
+allow for arbitrary headers
+what is the row limit??
+something like omino analytics: https://docs.google.com/spreadsheets/d/1v_FWe6kb2_-Yen16oAF4EoirSqAAGKdWcXIiDQwBSZs/edit#gid=97359993
+
+
+### DOCUMENTATION side
+User guide rewrite, draft here: https://drive.google.com/drive/u/1/folders/0BwMDQkWCgaBOUTFhZDFTODFINzg?resourcekey=0-B8fkun5Pfxgk5zr9HlHfFQ
+User guide incorporating seth art
+ideas "cookbook", a doc on how designers use analytics
+
+
+### MISC DOCUMENTATION
+
+set up itch page
+set up tinylytics.fun page
+using about info from documentation
+
+
+tidy up the repo page, add desc & links
+
+add a license
+add a EULA doc
+
+
