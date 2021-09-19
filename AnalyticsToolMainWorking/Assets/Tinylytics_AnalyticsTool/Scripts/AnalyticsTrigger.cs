@@ -31,5 +31,6 @@ namespace Tinylytics {
 		OnDestroy,
 		OnSceneUnloaded,
 		OnApplicationQuit
+		//Custom
 	}
 }
