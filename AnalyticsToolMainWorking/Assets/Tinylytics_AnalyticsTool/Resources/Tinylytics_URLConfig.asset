@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc25b0c2142be1419842db66d325513, type: 3}
   m_Name: Tinylytics_URLConfig
   m_EditorClassIdentifier: 
-  logo: {fileID: 0}
-  header: Test
+  logo: {fileID: 2800000, guid: 8255c0a2f337f37468be6d6bbd5b5643, type: 3}
+  header: 
   text: 
-  deploymentID: AKfycbwuOdPMTaWlO_zwh4TAgMyW4IZBgG7TA1fhQjQ8OofWIqatncY9gMUM_6DH3oLqxlOz
+  deploymentID: AKfycbw-QDYkrgfJ_3T-TDoPvSW3IpdizXRr6W-hf1Y0BDB-Ea4jmDVmhdV5l5gRZERmSXVA
