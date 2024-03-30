@@ -37,3 +37,5 @@ sysinfo.txt
 AnalyticsToolMainWorking/Temp/
 AnalyticsToolMainWorking/ProjectSettings/
 AnalyticsToolMainWorking/obj/
+AnalyticsToolMainWorking/Packages/manifest.json
+AnalyticsToolMainWorking/Packages/packages-lock.json
