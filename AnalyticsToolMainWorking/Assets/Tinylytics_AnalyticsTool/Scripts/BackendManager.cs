@@ -82,7 +82,7 @@ namespace Tinylytics {
 			//yield return www.Send();
 			yield return www.SendWebRequest();
 
-			if (www.isNetworkError) {
+			if (www.result == UnityWebRequest.Result.ConnectionError) {
 				Debug.Log(www.error);
 			} else {
 				//Debug.Log("Form upload complete!");
