@@ -1,4 +1,5 @@
-# Tinylytics
+<!--- # Tinylytics --->
+  <img src="Docs/Logo_Tinylytics_s256x128.png" width="256" height="128"/>
 
 ## About
 Tinylytics is a a free, open source tool plug-in for Unity descripition TBD.
