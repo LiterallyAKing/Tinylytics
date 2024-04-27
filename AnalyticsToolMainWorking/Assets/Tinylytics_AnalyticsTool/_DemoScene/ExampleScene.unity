@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 1207513647}
   - component: {fileID: 1207513646}
   m_Layer: 0
-  m_Name: EG4 _ Send Custom Metric via Code
+  m_Name: Example_ Sending Metrics via Code
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd83b736b25509149ad649470e490aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 2088838833}
 --- !u!4 &1207513647
 Transform:
   m_ObjectHideFlags: 0
@@ -254,149 +255,6 @@ Transform:
   m_GameObject: {fileID: 1207513645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1348912342
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1348912344}
-  - component: {fileID: 1348912343}
-  m_Layer: 0
-  m_Name: EG2 _ Grab Player Health when Player Disabled
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1348912343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348912342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73eb35823d688d4799873bdcc5568c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  metric_name: PlayerHealthWhenDisabled
-  datatosend:
-    m_EditingCustomValue: 0
-    m_PopupIndex: 0
-    m_CustomValue: 
-    m_FixedType: 0
-    m_EnumType: 
-    m_EnumTypeIsCustomizable: 1
-    m_CanDisable: 0
-    m_PropertyType: 2
-    m_ValueType: System.Int32
-    m_Value: 
-    m_Target:
-      m_Target: {fileID: 2088838833}
-      m_Path: playerHealth
-      m_ValidTypeNames:
-      - System.Int32
-      - System.Boolean
-      - System.Decimal
-      - System.Double
-      - System.Single
-      - System.Int64
-      - System.Int16
-      - System.String
-      - enum
-      m_Type: System.Int32
-      m_EnumType: 
-  trigger:
-    triggerEvent: 4
---- !u!4 &1348912344
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348912342}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2088838834}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1919355531
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1919355533}
-  - component: {fileID: 1919355532}
-  m_Layer: 0
-  m_Name: EG1 _ Log Current Level
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1919355532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919355531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73eb35823d688d4799873bdcc5568c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  metric_name: Current Level
-  datatosend:
-    m_EditingCustomValue: 0
-    m_PopupIndex: 0
-    m_CustomValue: 
-    m_FixedType: 0
-    m_EnumType: 
-    m_EnumTypeIsCustomizable: 1
-    m_CanDisable: 0
-    m_PropertyType: 1
-    m_ValueType: System.Int32
-    m_Value: 1
-    m_Target:
-      m_Target: {fileID: 0}
-      m_Path: 
-      m_ValidTypeNames:
-      - System.Int32
-      - System.Boolean
-      - System.Decimal
-      - System.Double
-      - System.Single
-      - System.Int64
-      - System.Int16
-      - System.String
-      m_Type: System.Int32
-      m_EnumType: 
-  trigger:
-    triggerEvent: 2
---- !u!4 &1919355533
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919355531}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 200.54176, y: 150.15097, z: 2.978705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -444,8 +302,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1348912344}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

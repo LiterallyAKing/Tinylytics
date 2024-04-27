@@ -10,9 +10,15 @@ namespace Tinylytics.Examples {
 	/// </summary>
 	public class SendDataViaCallInScript_Example : MonoBehaviour {
 
+		public PlayerScriptWithPublicVars_Example playerData;
 
 		void Start() {
+			//EG: Sending the current month
 			Tinylytics.AnalyticsManager.LogCustomMetric("Current Month", System.DateTime.Now.Month.ToString());
+			//EG: Sending variable from a linked object
+			Tinylytics.AnalyticsManager.LogCustomMetric("Player Name", playerData.playerName);
+			//EG: Sending variable from a linked object, note numbers must be passed as strings
+			Tinylytics.AnalyticsManager.LogCustomMetric("Player Health", playerData.playerHealth.ToString());
 		}
 
 	}
