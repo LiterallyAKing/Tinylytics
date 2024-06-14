@@ -73,9 +73,3 @@ These steps will show you how to set up a google sheet to act as your "database"
    
 5. To check if it’s working, go to Assets / Tinylytics_AnalyticsTool / _DemoScene
 6. Click on “ExampleScene” and hit play, wait a moment, and then exit play mode. Now go back to your data sheet. If you did everything correctly, you should see data populated!
-
-
-
-```
-Tinylytics.AnalyticsManager.LogCustomMetric("MetricName", "Data to send (as a string)" );
-```
