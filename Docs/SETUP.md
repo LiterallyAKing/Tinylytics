@@ -12,7 +12,7 @@ TODO
 
 ## Import the package into your project
 In Unity, right click in the assets area and go to "Import Package > Import Custom Package" and import all the contents.
-SCREENSHOT TODO
+   <img src="Imgs/Setup_unity_importcustompackage.png" width=700 />
 
 
 # Configuring your GoogleSheet database
@@ -63,6 +63,13 @@ These steps will show you how to set up a google sheet to act as your "database"
 
 ## Configuring Tinylytics in Unity
 
-```
-Tinylytics.AnalyticsManager.LogCustomMetric("MetricName", "Data to send (as a string)" );
-```
+1. Back in Unity, click Windows > Tinylytics > Configure, to bring up the config window.
+   
+   <img src="Imgs/Setup_unity_configure.png" width=700 />
+   
+3. Paste the code from step 8 into the Deployment ID field. Close this window.
+   
+   <img src="Imgs/Setup_unity_enterdeploymentid.png" width=700 />
+   
+5. To check if it’s working, go to Assets / Tinylytics_AnalyticsTool / _DemoScene
+6. Click on “ExampleScene” and hit play, wait a moment, and then exit play mode. Now go back to your data sheet. If you did everything correctly, you should see data populated!
