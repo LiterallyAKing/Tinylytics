@@ -1,9 +1,10 @@
-How to Track Data
+# How to Track Data
 Option 1: Call using code
 In any of your scripts, you can log a data event by calling Tinylytics.AnalyticsManager.LogCustomMetric. You need to supply the metric name, and the data, which must be formatted as a string (if it is a int or float etc, use the .ToString() method when passing the data).
 In this manner, you can embed the analytics tracking directly into your gameplay scripts.
-Caution: The game can only send so much data at once. Do not log data in the Update() loop!
 
+> [!CAUTION]
+> The game can only send so much data at once. Do not log data in the Update() loop!
 
 
 ```
