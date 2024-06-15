@@ -3,7 +3,7 @@
   </div>
   <div class="column">
   <div align="center">
-        <img src="Docs/Imgs/Logo_Tinylytics_s256x128.png" width="256" height="128" alignment="center"/>
+        <img src="Imgs/Logo_Tinylytics_s256x128.png" width="256" height="128" alignment="center"/>
     </a>
 </div></div></div>
 
