@@ -1,5 +1,14 @@
 <!--- # Tinylytics --->
-  <img src="Docs/Imgs/Logo_Tinylytics_s256x128.png" width="256" height="128"/>
+
+  </div>
+  <div class="column">
+  <div align="center">
+        <img src="Docs/Imgs/Logo_Tinylytics_s256x128.png" width="256" height="128" alignment="center"/>
+    </a>
+</div></div></div>
+
+  
+ 
 
 ## About 📊📉📈
 Tinylytics is a a free, open source plug-in for Unity that makes it easy to implement data gathering metrics in your game, while retaining all the data yourself.
