@@ -28,9 +28,7 @@ Metric data, on the other hand, is better for...
 - Spotting patterns that show up once a bigger population is playing, things that might be hard to see from just a few playtests
 - Measuring anything that's binary (did it happen? yes/no) or measurable as a number (how long, how much, how many times)--quantitative, not qualitative
 
-**Version**: 0.2.0
-
-**Author**: [Alexander King](https://www.literallyaking.com)
+**Version**: 0.2.1
 
 **License**: [License](https://github.com/LiterallyAKing/Tinylytics/LICENSE)
 
