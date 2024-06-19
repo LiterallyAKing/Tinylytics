@@ -1,19 +1,20 @@
 <!--- # Tinylytics --->
 
-  </div>
-  <div class="column">
+
   <div align="center">
         <img src="Imgs/Logo_Tinylytics_s256x128.png" width="256" height="128" alignment="center"/>
     </a>
-</div></div></div>
+</div>
 
-  
- 
-
-## About 📊📉📈
+## About
 Tinylytics is a a free, open source plug-in for Unity that makes it easy to implement data gathering metrics in your game, while retaining all the data yourself.
 
 When a designer hears the word “Analytics”, it can call to mind business metrics you might care about only begrudgingly, like monetization, retention, and a swirling array of acronyms. But recording player data and analyzing the results is a just tool, and it can help with concerns of pure design too. Things like difficulty progression, player experience, and competitive tuning are all benefited by utilizing analytics. Anything that a player does, you can track, and it's easier than you might think. Whether you’re working by yourself or part of a small studio, incorporating analytics can give you insights into improving your game that you can’t get from traditional playtesting— even if you don’t care about your game’s 7 day ARPU!
+
+ <div align="center">
+        <img src="Imgs/Clipart/ClipArt_Analyzer_512.png" width="256"  alignment="center"/>
+    </a>
+</div>
 
 Playtesting can be great for...
 - Small numbers of players who you can observe in person
