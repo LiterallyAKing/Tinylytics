@@ -1,10 +1,10 @@
-AnalyticsToolMainWorking/Library/
-AnalyticsToolMainWorking/.vs
-AnalyticsToolMainWorking/[Ll]ibrary/
-AnalyticsToolMainWorking/[Ll]ogs/
-AnalyticsToolMainWorking/[Uu]ser[Ss]ettings/
-AnalyticsToolMainWorking/[Tt]emp/
-AnalyticsToolMainWorking/[Oo]bj/
+Tinylytics/Library/
+Tinylytics/.vs
+Tinylytics/[Ll]ibrary/
+Tinylytics/[Ll]ogs/
+Tinylytics/[Uu]ser[Ss]ettings/
+Tinylytics/[Tt]emp/
+Tinylytics/[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
@@ -34,8 +34,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-AnalyticsToolMainWorking/Temp/
-AnalyticsToolMainWorking/ProjectSettings/
-AnalyticsToolMainWorking/obj/
-AnalyticsToolMainWorking/Packages/manifest.json
-AnalyticsToolMainWorking/Packages/packages-lock.json
+Tinylytics/Temp/
+Tinylytics/ProjectSettings/
+Tinylytics/obj/
+Tinylytics/Packages/manifest.json
+Tinylytics/Packages/packages-lock.json
