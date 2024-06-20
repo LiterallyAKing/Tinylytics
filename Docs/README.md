@@ -63,4 +63,6 @@ Where in the space of a game do certain events (like a player dying, or quitting
 
 # Credits
 
-**Author**: [Alexander King](https://www.literallyaking.com)
+Author...?: [Alexander King](https://www.literallyaking.com)
+Producer: [Naomi Clark](https://metasynthie.itch.io)
+Art & Illustration: [Seth S Scott](https://www.sethsscott.com)
