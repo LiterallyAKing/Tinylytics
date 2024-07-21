@@ -6,31 +6,30 @@
     </a>
 </div>
 
-## About
 Tinylytics is a a free, open source plug-in for Unity that makes it easy to implement data gathering metrics in your game, while retaining all the data yourself.
-
-When a designer hears the word “Analytics”, it can call to mind business metrics you might care about only begrudgingly, like monetization, retention, and a swirling array of acronyms like DARPPU. But recording player data and analyzing the results is a just tool, and it can help with concerns of pure design too. Things like difficulty progression, player experience, and competitive tuning are all benefited by utilizing analytics. Anything that a player does, you can track, and it's easier than you might think. Whether you’re working by yourself or part of a small studio, incorporating analytics can give you insights into improving your game that you can’t get from traditional playtesting— even if you don’t care about your game’s 7 day ARPU!
-
- <div align="left" vspace=10 hspace=10>
-        <img src="Imgs/Clipart/ClipArt_Analyzer_512.png" width="256"  alignment="center"/>
-    </a>
-</div>
-
-Playtesting can be great for...
-- Small numbers of players who you can observe in person
-- Early stages of development, where you might make broad changes in response
-- Rich, qualitative information: how does this individual feel? what's the look on their face?who are they as a person / player that might help give context to a reaction?
-- Observing social interactions between multiple players
-
-Metric data, on the other hand, is better for...
-- Delivering a build to a larger community and getting information back from everyone who plays
-- The kind of fine-tuning design decisions you might make later in development
-- Spotting patterns that show up once a bigger population is playing, things that might be hard to see from just a few playtests
-- Measuring anything that's binary (did it happen? yes/no) or measurable as a number (how long, how much, how many times)--quantitative, not qualitative
 
 **Version**: 0.2.1
 
 **License**: [License](https://github.com/LiterallyAKing/Tinylytics/LICENSE)
+
+<details>
+<summary>Table of Contents</summary>
+Background
+  
+Getting Started
+</details>
+
+
+## Background
+
+When a designer hears the word “Analytics”, it can call to mind business metrics you might care about only begrudgingly, like monetization, retention, and a swirling array of acronyms like DARPPU. But recording player data and analyzing the results is a just tool, and it can help with concerns of pure design too. Things like difficulty progression, player experience, and competitive tuning are all benefited by utilizing analytics. Anything that a player does, you can track, and it's easier than you might think. Whether you’re working by yourself or part of a small studio, incorporating analytics can give you insights into improving your game that you can’t get from traditional playtesting— even if you don’t care about your game’s 7 day ARPU!
+
+ <div align="center" vspace=10 hspace=10>
+        <img src="Imgs/Clipart/ClipArt_Analyzer_512.png" width="256"  alignment="center"/>
+    </a>
+</div>
+
+
 
 Existing gameplay analytics packages:
 focus only on "business metrics" like virality, monetization and advertising effectiveness
@@ -47,10 +46,23 @@ can't and doesn't ever share your players' data with anyone else—only you have
 
 
 # Getting Started
-Install guide here? Or probably on a separate page.
-
+[Setup and Install Guide](https://github.com/LiterallyAKing/Tinylytics/Docs/SETUP)
 
 # How To Use
+
+Playtesting can be great for...
+- Small numbers of players who you can observe in person
+- Early stages of development, where you might make broad changes in response
+- Rich, qualitative information: how does this individual feel? what's the look on their face?who are they as a person / player that might help give context to a reaction?
+- Observing social interactions between multiple players
+
+Metric data, on the other hand, is better for...
+- Delivering a build to a larger community and getting information back from everyone who plays
+- The kind of fine-tuning design decisions you might make later in development
+- Spotting patterns that show up once a bigger population is playing, things that might be hard to see from just a few playtests
+- Measuring anything that's binary (did it happen? yes/no) or measurable as a number (how long, how much, how many times)--quantitative, not qualitative
+
+
 How long do players play?
 How many accomplish particular objectives? (Finishing a chapter, scoring a certain # of points...)
 How popular are particular items, resources, or strategies? (Assuming you can define the strategies!)
@@ -63,6 +75,8 @@ Where in the space of a game do certain events (like a player dying, or quitting
 
 # Credits
 
-Author...?: [Alexander King](https://www.literallyaking.com)
+Developer/Designer: [Alexander King](https://www.literallyaking.com)
+
 Producer: [Naomi Clark](https://metasynthie.itch.io)
+
 Art & Illustration: [Seth S Scott](https://www.sethsscott.com)
