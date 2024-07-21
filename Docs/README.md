@@ -12,13 +12,16 @@ Tinylytics is a a free, open source plug-in for Unity that makes it easy to impl
 
 **License**: [License](LICENSE.txt)
 
-<details>
-<summary>Table of Contents</summary>
-Background
-  
-Getting Started
-</details>
+## Credits
 
+- Developer/Designer: [Alexander King](https://www.literallyaking.com)
+- Producer: [Naomi Clark](https://metasynthie.itch.io)
+- Art & Illustration: [Seth S Scott](https://www.sethsscott.com)
+
+
+## [Setup and Install Guide](SETUP.md)
+
+## [Usage Guide](USAGE.MD)
 
 ## Background
 
@@ -28,7 +31,6 @@ When a designer hears the word “Analytics”, it can call to mind business met
         <img src="Imgs/Clipart/ClipArt_Analyzer_512.png" width="256"  alignment="center"/>
     </a>
 </div>
-
 
 
 Existing gameplay analytics packages:
@@ -45,17 +47,5 @@ hands over all the data directly to you, the developer, no strings attached!
 can't and doesn't ever share your players' data with anyone else—only you have it!
 
 
-# Getting Started
-[Setup and Install Guide](SETUP.md)
 
-# How To Use
 
-[Usage Guide](USAGE.MD)
-
-# Credits
-
-Developer/Designer: [Alexander King](https://www.literallyaking.com)
-
-Producer: [Naomi Clark](https://metasynthie.itch.io)
-
-Art & Illustration: [Seth S Scott](https://www.sethsscott.com)
