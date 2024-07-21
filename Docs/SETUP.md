@@ -73,3 +73,7 @@ These steps will show you how to set up a google sheet to act as your "database"
    
 5. To check if it’s working, go to Assets / Tinylytics_AnalyticsTool / _DemoScene
 6. Click on “ExampleScene” and hit play, wait a moment, and then exit play mode. Now go back to your data sheet. If you did everything correctly, you should see data populated!
+
+
+## Next Steps
+Now that it's all set up, head over to the [Usage Guide](USAGE.MD) for information on how to use Tinylytics in your project.
