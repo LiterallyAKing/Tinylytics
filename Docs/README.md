@@ -50,28 +50,7 @@ can't and doesn't ever share your players' data with anyone else—only you have
 
 # How To Use
 
-Playtesting can be great for...
-- Small numbers of players who you can observe in person
-- Early stages of development, where you might make broad changes in response
-- Rich, qualitative information: how does this individual feel? what's the look on their face?who are they as a person / player that might help give context to a reaction?
-- Observing social interactions between multiple players
-
-Metric data, on the other hand, is better for...
-- Delivering a build to a larger community and getting information back from everyone who plays
-- The kind of fine-tuning design decisions you might make later in development
-- Spotting patterns that show up once a bigger population is playing, things that might be hard to see from just a few playtests
-- Measuring anything that's binary (did it happen? yes/no) or measurable as a number (how long, how much, how many times)--quantitative, not qualitative
-
-
-How long do players play?
-How many accomplish particular objectives? (Finishing a chapter, scoring a certain # of points...)
-How popular are particular items, resources, or strategies? (Assuming you can define the strategies!)
-How successful at winning or achieving are players who use those things?
-Which choices do players make, for instance at a narrative or dialogue branch?
-How long do players spend doing various activities or on certain screens?
-How long does it take before players figure out how to interact at a certain point in the game?
-Where in the space of a game do certain events (like a player dying, or quitting, or using an item) tend to happen?
-
+[Usage Guide](USAGE.MD)
 
 # Credits
 
