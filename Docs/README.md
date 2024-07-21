@@ -10,7 +10,7 @@ Tinylytics is a a free, open source plug-in for Unity that makes it easy to impl
 
 **Version**: 0.2.1
 
-**License**: [License](https://github.com/LiterallyAKing/Tinylytics/LICENSE)
+**License**: [License](LICENSE.txt)
 
 <details>
 <summary>Table of Contents</summary>
@@ -46,7 +46,7 @@ can't and doesn't ever share your players' data with anyone else—only you have
 
 
 # Getting Started
-[Setup and Install Guide](https://github.com/LiterallyAKing/Tinylytics/Docs/SETUP)
+[Setup and Install Guide](SETUP.md)
 
 # How To Use
 
