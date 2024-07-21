@@ -7,8 +7,8 @@ Table of Contents
 <!--- </details> --->
 
 ## Getting the Tinylytics Plugin
-Go to releases and download the latest version, a .unitypackage file.
-TODO
+Go to [Tinylytics/Releases](https://github.com/LiterallyAKing/Tinylytics/releases) and download the latest version to get the .unitypackage file.
+
 
 ## Import the package into your project
 In Unity, right click in the assets area and go to "Import Package > Import Custom Package" and import all the contents.
